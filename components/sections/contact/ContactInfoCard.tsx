@@ -30,7 +30,7 @@ export function ContactInfoCard({ company }: { company: CompanyInfo }) {
           </li>
           <li className="flex items-center gap-3">
             <Globe className="h-4 w-4 shrink-0 text-secondary" strokeWidth={1.75} />
-            <span className="font-sm font-ibm">{company.website} (to be confirmed)</span>
+            <span className="font-sm font-ibm">{company.website}</span>
           </li>
         </ul>
 

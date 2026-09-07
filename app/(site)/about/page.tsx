@@ -3,7 +3,6 @@ import { AboutHero } from "@/components/sections/about/AboutHero";
 import { CompanyOverview } from "@/components/sections/about/CompanyOverview";
 import { CoreValuesSection } from "@/components/sections/about/CoreValuesSection";
 import { TechSection } from "@/components/sections/about/TechSection";
-import { CTABanner } from "@/components/sections/shared/CTABanner";
 import { getAboutOverview, getCoreValues, getMissionVision } from "@/lib/content/values";
 import { getTechFeatures } from "@/lib/content/tech";
 import { getCompanyInfo } from "@/lib/content/company";

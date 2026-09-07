@@ -11,10 +11,10 @@ export function getCompanyInfo(): CompanyInfo {
     phoneHref: "tel:+2340000000000",
     whatsapp: "+234 000 000 0000",
     whatsappHref: "https://wa.me/2340000000000",
-    email: "info@borisengineering.com",
+    email: "info@boriseng.com",
     address: "Lagos, Nigeria (full office address to be confirmed)",
     addressConfirmed: false,
-    website: "borisengineering.com",
+    website: "boriseng.com",
     socials: [
       { platform: "linkedin", href: "#" },
       { platform: "facebook", href: "#" },
