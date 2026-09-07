@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#162A50"/>
+  <g opacity="0.15">
+    <rect x="0" y="0" width="1200" height="630" fill="url(#grid)"/>
+  </g>
+  <defs>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#F1AC17" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <text x="50%" y="50%" dominant-baseline="middle" text-anchor="middle"
+        font-family="Arial, sans-serif" font-size="54" font-weight="700" fill="#F1AC17">
+    Boris Engineering & Construction Ltd
+  </text>
+</svg>

@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+:root {
+  --background: #F9FAFC;
+  --primary: #162A50;
+  --onPrimary: #F6F9FC;
+  --secondary: #F1AC17;
+  --onSecondary: #121F37;
+  --accent: #08B565;
+  --onAccent: #F9FDFA;
+  --cardBg: #ffffff;
+  --secondaryText: #5F6A79;
+  --primaryText: #0C182A;
+  --lightBorder: #D9DFE6;
+  --bgSec: #E3E8EF;
+  --font-archivo: "Archivo", sans-serif;
+  --font-ibm: "IBM Plex Sans", sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-primary: var(--primary);
+  --color-on-primary: var(--onPrimary);
+  --color-secondary: var(--secondary);
+  --color-on-secondary: var(--onSecondary);
+  --color-accent: var(--accent);
+  --color-on-accent: var(--onAccent);
+  --color-card: var(--cardBg);
+  --color-secondary-text: var(--secondaryText);
+  --color-primary-text: var(--primaryText);
+  --color-border: var(--lightBorder);
+  --color-bg-sec: var(--bgSec);
+  --font-archivo: var(--font-archivo);
+  --font-ibm: var(--font-ibm);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--primaryText);
+  font-family: var(--font-ibm);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-archivo);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid var(--secondary);
+  outline-offset: 2px;
+}
