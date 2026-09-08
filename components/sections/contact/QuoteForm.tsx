@@ -466,7 +466,7 @@ export function QuoteForm() {
               </a>{" "}
               and{" "}
               <a
-                href="/terms-conditions"
+                href="/terms-condition"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="font-semibold text-primary-text underline underline-offset-2 hover:text-secondary"

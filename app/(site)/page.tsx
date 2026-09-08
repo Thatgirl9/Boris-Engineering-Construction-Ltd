@@ -43,7 +43,7 @@ export default async function Home() {
       <ProcessSection steps={getProcessSteps()} />
       <TechSection features={getTechFeaturesForHome()} />
       <ProjectsPreviewSection projects={featuredProjects} />
-      <TestimonialsSection testimonials={getTestimonials()} />
+      <TestimonialsSection testimonials={getTestimonials()} company={company} />
     </>
   );
 }

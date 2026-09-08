@@ -22,7 +22,7 @@ export function HeroSection({ company }: { company: CompanyInfo }) {
 
       <Container className="relative py-20 sm:py-28 lg:py-32">
         <div className="max-w-2xl">
-          <Eyebrow divider={true}>Nigerian Engineering &amp; Construction</Eyebrow>
+          <Eyebrow divider={true}>Engineering Excellence. Built To Last</Eyebrow>
           <h1 className="mt-4 font-archivo text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-[3.75rem]">
             {company.name.toUpperCase()}
           </h1>

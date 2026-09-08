@@ -34,10 +34,15 @@ export interface ServiceItem {
   title: string;
   description: string;
   details: string[];
-}
+};
 
 export interface ValueItem {
   icon: IconName;
+  title: string;
+  description: string;
+};
+
+export interface ValueItemWithoutIcon {
   title: string;
   description: string;
 }

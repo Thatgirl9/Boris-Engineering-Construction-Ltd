@@ -3,10 +3,11 @@ import { AboutHero } from "@/components/sections/about/AboutHero";
 import { CompanyOverview } from "@/components/sections/about/CompanyOverview";
 import { CoreValuesSection } from "@/components/sections/about/CoreValuesSection";
 import { TechSection } from "@/components/sections/about/TechSection";
-import { getAboutOverview, getCoreValues, getMissionVision } from "@/lib/content/values";
+import { getAboutOverview, getHowWeWorkValues, getCoreValues, getMissionVision } from "@/lib/content/values";
 import { getTechFeatures } from "@/lib/content/tech";
 import { getCompanyInfo } from "@/lib/content/company";
 import { buildMetadata, breadcrumbJsonLd } from "@/lib/seo";
+import { HowWeWorkSection } from "@/components/sections/about/HowWeWorkSection";
 
 export const metadata: Metadata = buildMetadata({
   title: "About Us",
@@ -41,6 +42,7 @@ export default function AboutPage() {
         mission={mission}
         vision={vision}
       />
+      <HowWeWorkSection values={getHowWeWorkValues()} />
       <CoreValuesSection values={getCoreValues()} />
       <TechSection features={getTechFeatures()} company={company} />
       {/* <CTABanner

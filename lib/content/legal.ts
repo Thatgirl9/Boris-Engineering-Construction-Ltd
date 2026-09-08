@@ -82,7 +82,7 @@ export function getTermsAndConditions(): LegalDocument {
     title: "Terms & Conditions",
     lastUpdated: LAST_UPDATED,
     intro: [
-      "These terms govern your use of the Boris Engineering & Construction Ltd website (borisengineering.com) and your submission of a Request a Quote form. By using this site or submitting a request, you agree to these terms.",
+      "These terms govern your use of the Boris Engineering & Construction Ltd website (boriseng.com) and your submission of a Request a Quote form. By using this site or submitting a request, you agree to these terms.",
     ],
     sections: [
       {

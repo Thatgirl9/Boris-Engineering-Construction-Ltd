@@ -8,7 +8,7 @@ export const metadata: Metadata = buildMetadata({
   title: "Terms & Conditions",
   description:
     "The terms that govern your use of the Boris Engineering & Construction Ltd website and quote request form.",
-  path: "/terms-conditions",
+  path: "/terms-condition",
 });
 
 export default function TermsConditionsPage() {
@@ -22,7 +22,7 @@ export default function TermsConditionsPage() {
           __html: JSON.stringify(
             breadcrumbJsonLd([
               { name: "Home", path: "/" },
-              { name: "Terms & Conditions", path: "/terms-conditions" },
+              { name: "Terms & Conditions", path: "/terms-condition" },
             ])
           ),
         }}

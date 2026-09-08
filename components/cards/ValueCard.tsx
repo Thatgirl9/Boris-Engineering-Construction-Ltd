@@ -1,5 +1,5 @@
 import { Icon } from "@/components/ui/Icon";
-import { ValueItem } from "@/lib/types";
+import { ValueItem, ValueItemWithoutIcon } from "@/lib/types";
 
 export function ValueCard({ item }: { item: ValueItem }) {
   return (
@@ -9,7 +9,16 @@ export function ValueCard({ item }: { item: ValueItem }) {
       <p className="mt-2 text-sm leading-relaxed font-ibm text-secondary-text">{item.description}</p>
     </div>
   );
-}
+};
+
+export function ValueCardWithoutIcon({ item }: { item: ValueItemWithoutIcon }) {
+  return (
+    <div className="rounded-xl border border-border bg-card p-6">
+      <h3 className="mt-4 text-base font-archivo font-bold text-primary-text">{item.title}</h3>
+      <p className="mt-2 text-sm leading-relaxed font-ibm text-secondary-text">{item.description}</p>
+    </div>
+  );
+};
 
 export function InlineFeature({ item }: { item: ValueItem }) {
   return (
