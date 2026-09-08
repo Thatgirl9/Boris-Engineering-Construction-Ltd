@@ -44,7 +44,7 @@ export function organizationJsonLd() {
     name: SITE_NAME,
     url: SITE_URL,
     logo: `${SITE_URL}/LogoWithLtd.svg`,
-    telephone: "+234-000-000-0000",
+    telephone: "+234-902-641-3967",
     email: "info@boriseng.com",
     address: {
       "@type": "PostalAddress",

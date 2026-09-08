@@ -18,9 +18,9 @@ import { getTestimonials } from "@/lib/content/testimonials";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Nigerian Engineering & Construction Company",
+  title: "Boris Engineering & Construction Company",
   description:
-    "Boris Engineering & Construction Ltd delivers residential, commercial, and civil engineering projects across Nigeria — building construction, renovation, concrete works, and project management.",
+    "Boris Engineering & Construction Ltd delivers residential, commercial, and civil engineering projects across Nigeria, providing building construction, renovation, concrete works, and project management.",
   path: "/",
 });
 

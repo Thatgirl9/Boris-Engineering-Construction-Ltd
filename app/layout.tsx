@@ -19,8 +19,8 @@ const ibmPlexSans = IBM_Plex_Sans({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} | Nigerian Engineering & Construction`,
-    template: `%s | ${SITE_NAME}`,
+    default: `${SITE_NAME}`,
+    template: `${SITE_NAME}`,
   },
   description:
     "Boris Engineering & Construction Ltd is a Nigerian engineering and construction company delivering quality, durable, and innovative building, civil, and renovation solutions.",
