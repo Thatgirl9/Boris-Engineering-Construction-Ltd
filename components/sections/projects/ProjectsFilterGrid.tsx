@@ -6,6 +6,7 @@ import { Eyebrow } from "@/components/ui/Badge";
 import { ProjectCard } from "@/components/cards/ProjectCard";
 import { ProjectItem, ProjectCategory } from "@/lib/types";
 import { cn } from "@/lib/cn";
+import { HardHat } from "lucide-react";
 
 export function ProjectsFilterGrid({
   projects,
@@ -20,6 +21,21 @@ export function ProjectsFilterGrid({
     () => (active === "All" ? projects : projects.filter((p) => p.category === active)),
     [active, projects]
   );
+
+   if (projects.length === 0) {
+    return (
+      <Section background="default">
+        <div className="flex flex-col items-center rounded-xl border border-dashed border-border bg-card/50 py-16 text-center">
+          <HardHat className="h-10 w-10 text-secondary-text/60" strokeWidth={1.5} />
+          <h2 className="mt-4 text-lg font-bold text-primary-text">No projects available yet</h2>
+          <p className="mt-2 max-w-sm text-sm leading-relaxed text-secondary-text">
+            We&apos;re preparing our project portfolio. Check back soon, or reach out directly to
+            discuss recent work.
+          </p>
+        </div>
+      </Section>
+    );
+  };
 
   return (
     <Section background="default">

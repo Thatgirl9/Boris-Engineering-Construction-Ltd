@@ -6,6 +6,9 @@ import { ProjectCardCompact } from "@/components/cards/ProjectCard";
 import { ProjectItem } from "@/lib/types";
 
 export function ProjectsPreviewSection({ projects }: { projects: ProjectItem[] }) {
+
+   if (projects.length === 0) return null;
+   
   return (
     <Section background="default">
       <SectionHeading eyebrow="Featured Projects" heading="Recent work" />
