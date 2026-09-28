@@ -11,6 +11,10 @@ export const metadata: Metadata = buildMetadata({
   path: "/projects",
 });
 
+// Content lives in Sanity and can change at any time without a redeploy
+// — re-check every 5 minutes rather than caching forever.
+export const revalidate = 300;
+
 export default async function ProjectsPage() {
   const projects = await getProjects();
 

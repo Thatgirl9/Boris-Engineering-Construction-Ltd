@@ -35,7 +35,7 @@ export function buildMetadata({
       images: [image],
     },
   };
-}
+};
 
 export function organizationJsonLd() {
   return {
@@ -54,7 +54,7 @@ export function organizationJsonLd() {
     areaServed: "NG",
     sameAs: [],
   };
-}
+};
 
 export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
   return {
@@ -67,4 +67,4 @@ export function breadcrumbJsonLd(items: { name: string; path: string }[]) {
       item: `${SITE_URL}${item.path}`,
     })),
   };
-}
+};

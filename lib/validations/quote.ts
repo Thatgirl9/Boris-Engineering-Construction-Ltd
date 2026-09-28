@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { MAX_ATTACHMENT_BYTES } from "@/lib/supabase/storage";
 
 export const PROJECT_TYPES = [
   "Building Construction",
@@ -10,6 +11,13 @@ export const PROJECT_TYPES = [
   "Building Maintenance",
   "Other",
 ] as const;
+
+export const attachmentMetaSchema = z.object({
+  name: z.string().trim().min(1).max(255),
+  path: z.string().trim().min(1).max(500),
+  size: z.number().positive().max(MAX_ATTACHMENT_BYTES),
+  type: z.string().trim().max(100).optional().or(z.literal("")),
+});
 
 export const quoteRequestSchema = z.object({
   fullName: z.string().trim().min(2, "Enter your full name").max(120),
@@ -31,20 +39,24 @@ export const quoteRequestSchema = z.object({
   description: z.string().trim().max(4000).optional().or(z.literal("")),
   // Honeypot field — must stay empty. Bots that autofill every field will
   // trip this; real users never see it (visually hidden in the form).
+  attachments: z.array(attachmentMetaSchema).max(5).optional(),
+  consent: z.literal(true, {
+    error: "You must agree to the Privacy Policy and Terms & Conditions to continue.",
+  }),
   company: z.string().max(0).optional().or(z.literal("")),
-  attachments: z
-    .array(
-      z.object({
-        name: z.string().trim().min(1).max(255),
-        path: z.string().trim().min(1).max(255),
-        size: z
-          .number()
-          .positive()
-          .max(20 * 1024 * 1024), // 20MB
-        type: z.string().trim().max(100).optional().or(z.literal("")),
-      }),
-    )
-    .optional(),
+  // attachments: z
+  //   .array(
+  //     z.object({
+  //       name: z.string().trim().min(1).max(255),
+  //       path: z.string().trim().min(1).max(255),
+  //       size: z
+  //         .number()
+  //         .positive()
+  //         .max(20 * 1024 * 1024), // 20MB
+  //       type: z.string().trim().max(100).optional().or(z.literal("")),
+  //     }),
+  //   )
+  //   .optional(),
 });
 
 export type QuoteRequestInput = z.infer<typeof quoteRequestSchema>;

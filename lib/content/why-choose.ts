@@ -4,38 +4,38 @@ export function getWhyChooseItems(): ValueItem[] {
   return [
     {
       icon: "quality",
-      title: "Quality Workmanship",
-      description: "Committed to delivering durable and properly executed construction work.",
+      title: "​Verified Materials",
+      description: "Steel rebar sizes and concrete mix ratios are tested before casting to prevent structural compromise.",
     },
     {
       icon: "civil",
-      title: "Professional Approach",
-      description: "Professionalism in communication, planning, supervision, and execution.",
+      title: "Milestone Accounting",
+      description: "Detailed Bills of Quantities (BOQ) with clear stage billings—zero unverified cost variations.",
     },
     {
       icon: "message",
-      title: "Transparent Communication",
-      description: "Keeping clients informed with clear information on requirements and costs.",
+      title: "Strict Site Safety",
+      description: "Active HSE protocols protecting workers, surrounding properties, and project assets.",
     },
     {
       icon: "clock",
-      title: "Timely Delivery",
-      description: "Careful planning to complete projects within agreed timelines.",
+      title: "On-Schedule Delivery",
+      description: "Critical-path planning to ensure handovers occur within agreed project timelines.",
     },
     {
       icon: "shield",
-      title: "Safety First",
-      description: "Safety remains an essential part of our operations.",
+      title: "Code Compliance",
+      description: "All engineering calculations and site operations strictly align with Nigerian building codes.",
     },
     {
       icon: "link",
-      title: "Competitive Pricing",
-      description: "Providing quality solutions at competitive and realistic prices.",
+      title: "Value-Engineered Rates",
+      description: "Practical material procurement and accurate quantity surveying to optimize project cost.",
     },
     {
       icon: "heartHandshake",
-      title: "Customer-Focused Service",
-      description: "Listening to clients to ensure project requirements are fully understood.",
+      title: "Client-First Reporting",
+      description: "Scheduled video walkthroughs and material delivery logs sent directly to your phone.",
     },
   ];
 }

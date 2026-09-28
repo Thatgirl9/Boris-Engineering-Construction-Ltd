@@ -12,5 +12,5 @@ const builder = sanityClient ? createImageUrlBuilder(sanityClient) : null;
  *  or the field is empty (callers should fall back to a placeholder). */
 export function urlForImage(source: SanityImageSource | undefined | null): string | null {
   if (!builder || !source?.asset) return null;
-  return builder.image(source).width(1200).fit("max").auto("format").url();
+  return builder.image(source).width(2000).quality(90).fit("max").auto("format").url();
 }

@@ -1,5 +1,6 @@
 import Image from "next/image";
-import { MapPin } from "lucide-react";
+import Link from "next/link";
+import { MapPin, ArrowRight } from "lucide-react";
 import { ProjectItem } from "@/lib/types";
 import { cn } from "@/lib/cn";
 
@@ -59,7 +60,16 @@ export function ProjectCard({ project }: { project: ProjectItem }) {
             </div>
           ))}
         </div>
+
+        <Link
+          href={`/projects/${project.slug}`}
+          className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-primary-text hover:text-secondary"
+        >
+          View Project
+          <ArrowRight className="h-4 w-4" strokeWidth={1.75} />
+        </Link>
       </div>
+
     </article>
   );
 }

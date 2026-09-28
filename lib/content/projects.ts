@@ -1,4 +1,4 @@
-import { ProjectItem, ProjectCategory } from "@/lib/types";
+import { ProjectItem, ProjectCategory, ProjectStage, ProjectVideo, ProjectTestimonial } from "@/lib/types";
 import { sanityClient, isSanityConfigured } from "@/lib/sanity/client";
 import { urlForImage } from "@/lib/sanity/image";
 
@@ -26,7 +26,20 @@ const PROJECTS_QUERY = `*[_type == "project"] | order(coalesce(order, 999) asc, 
   coverImage,
   beforeImage,
   duringImage,
-  afterImage
+  afterImage,
+  scopeOfWork,
+  stages,
+  gallery,
+  "videos": videos[]{
+    "url": file.asset->url,
+    caption
+  },
+  "testimonials": testimonials[]{
+    quote,
+    authorName,
+    authorRole,
+    photo
+  }
 }`;
 
 interface SanityProjectDoc {
@@ -40,11 +53,59 @@ interface SanityProjectDoc {
   beforeImage?: Record<string, unknown>;
   duringImage?: Record<string, unknown>;
   afterImage?: Record<string, unknown>;
+  scopeOfWork?: string[];
+  stages?: ProjectStage[];
+  gallery?: Record<string, unknown>[];
+  videos?: { url: string | null; caption?: string }[];
+  testimonials?: {
+    quote: string;
+    authorName?: string;
+    authorRole?: string;
+    photo?: Record<string, unknown>;
+  }[];
+}
+
+// function mapSanityProject(doc: SanityProjectDoc): ProjectItem {
+//   return {
+//     slug: doc.slug,
+//     title: doc.title,
+//     category: doc.category,
+//     location: doc.location,
+//     status: doc.status,
+//     description: doc.description,
+//     images: {
+//       cover: urlForImage(doc.coverImage) ?? PLACEHOLDER_IMAGE,
+//       before: urlForImage(doc.beforeImage) ?? PLACEHOLDER_IMAGE,
+//       during: urlForImage(doc.duringImage) ?? PLACEHOLDER_IMAGE,
+//       after: urlForImage(doc.afterImage) ?? PLACEHOLDER_IMAGE,
+//     },
+//   };
+// };
+
+function normalizeProjectSlug(slug: string): string {
+  return slug
+    .trim()
+    .toLowerCase()
+    .replace(/[_\s]+/g, "-")
+    .replace(/[^a-z0-9-]+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
 }
 
 function mapSanityProject(doc: SanityProjectDoc): ProjectItem {
+  const videos: ProjectVideo[] = (doc.videos ?? [])
+    .filter((v): v is { url: string; caption?: string } => Boolean(v.url))
+    .map((v) => ({ url: v.url, caption: v.caption }));
+
+  const testimonials: ProjectTestimonial[] = (doc.testimonials ?? []).map((t) => ({
+    quote: t.quote,
+    authorName: t.authorName,
+    authorRole: t.authorRole,
+    photo: urlForImage(t.photo) ?? undefined,
+  }));
+
   return {
-    slug: doc.slug,
+    slug: normalizeProjectSlug(doc.slug),
     title: doc.title,
     category: doc.category,
     location: doc.location,
@@ -56,8 +117,15 @@ function mapSanityProject(doc: SanityProjectDoc): ProjectItem {
       during: urlForImage(doc.duringImage) ?? PLACEHOLDER_IMAGE,
       after: urlForImage(doc.afterImage) ?? PLACEHOLDER_IMAGE,
     },
+    scopeOfWork: doc.scopeOfWork?.length ? doc.scopeOfWork : undefined,
+    stages: doc.stages?.length ? doc.stages : undefined,
+    gallery: doc.gallery?.length
+      ? doc.gallery.map((img) => urlForImage(img)).filter((url): url is string => Boolean(url))
+      : undefined,
+    videos: videos.length ? videos : undefined,
+    testimonials: testimonials.length ? testimonials : undefined,
   };
-}
+};
 
 /**
  * Fetches projects from Sanity when configured; otherwise returns the
@@ -73,7 +141,7 @@ export async function getProjects(): Promise<ProjectItem[]> {
     return (docs ?? []).map(mapSanityProject);
   } catch (err) {
     console.error(
-      "Failed to fetch projects from Sanity, using fallback content:",
+      "Failed to fetch projects from Sanity:",
       err,
     );
     return [];
@@ -92,7 +160,8 @@ export async function getProjectBySlug(
   slug: string,
 ): Promise<ProjectItem | undefined> {
   const all = await getProjects();
-  return all.find((p) => p.slug === slug);
+  const normalizedSlug = normalizeProjectSlug(slug);
+  return all.find((p) => normalizeProjectSlug(p.slug) === normalizedSlug);
 }
 
 export async function getFeaturedProjects(limit = 4): Promise<ProjectItem[]> {

@@ -6,7 +6,7 @@ export function getCompanyInfo(): CompanyInfo {
   return {
     name: "Boris Engineering & Construction Ltd",
     shortName: "Boris Engineering",
-    tagline: "Building Excellence. Delivering Quality.",
+    tagline: "Engineered for Durability. Built for Generations.",
     phone: "+234 902 641 3967",
     phoneHref: "tel:+2349026413967",
     whatsapp: "+234 813 516 9711",
@@ -36,9 +36,9 @@ export function getNavLinks(): NavLink[] {
 
 export function getHomeStats(): { value: string; label: string }[] {
   return [
-    { value: "8+", label: "Core service areas" },
-    { value: "7", label: "Step delivery process" },
-    { value: "100%", label: "Safety-monitored sites" },
-    { value: "24/7", label: "Client communication" },
+    { value: "8+", label: "Core service Disciplines" },
+    { value: "7", label: "Step Quality Blueprint" },
+    { value: "100%", label: "Code-Compliant Sites" },
+    { value: "24/7", label: "Direct Project Updates" },
   ];
 }

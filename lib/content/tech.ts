@@ -27,21 +27,21 @@ export function getTechFeaturesForHome(): TechFeatureItem[] {
    return [
     {
       icon: "compass",
-      title: "Digital cost breakdowns",
+      title: "​Itemized BOQ Auditing",
       description:
-        "Clear, itemized estimates you can review before work begins.",
+        "Transparent material and labor cost tracking before work begins.",
     },
     {
       icon: "cloud",
-      title: "Photo & video site logs",
+      title: "Photo & Video Logs",
       description:
-        "Regular visual updates from site, sent directly to you.",
+        "High-definition progress footage delivered directly to your WhatsApp or portal.",
     },
     {
       icon: "devices",
-      title: "Digital plan reviews",
+      title: "Digital Drawing Coordination",
       description:
-        "Drawings and revisions reviewed and shared online.",
+        "Real-time review and coordination of structural and architectural revisions.",
     },
   ];
 }

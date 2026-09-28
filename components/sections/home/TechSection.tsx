@@ -8,13 +8,11 @@ export function TechSection({ features }: { features: TechFeatureItem[] }) {
       <div className="rounded-2xl border border-border bg-card p-8 shadow-xl sm:p-12">
         <Eyebrow>Technology-Driven Construction</Eyebrow>
         <h2 className="mt-3 max-w-2xl text-3xl font-archivo font-bold leading-tight tracking-tight text-primary-text sm:text-[2.25rem]">
-          Modern, Digital Project Tracking
+          Direct Site Oversight From Anywhere
         </h2>
         <p className="mt-4 max-w-2xl font-ibm text-base leading-relaxed text-secondary-text">
-          At Boris Engineering &amp; Construction Ltd, we use modern digital communication and
-          documentation tools to make construction transparent and organized. We provide our
-          clients with detailed digital cost breakdowns, regular photo and video site updates,
-          and clear project tracking so you always know the exact status of your project.
+          You do not need to be on-site every week to protect your capital. We eliminate guesswork for local and diaspora property owners through cloud-based cost auditing, verified material manifests, and high-definition video walkthroughs sent at every milestone.
+          
         </p>
 
         <div className="mt-8 grid grid-cols-1 gap-6 border-t border-border pt-8 sm:grid-cols-3">

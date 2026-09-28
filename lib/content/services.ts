@@ -6,7 +6,7 @@ const services: ServiceItem[] = [
     icon: "building",
     title: "Building Construction",
     description:
-      "Residential, commercial, and other building construction projects from planning through completion.",
+      "Turnkey residential homes, multi-unit estates, and commercial facilities built from setting out to final handover.",
     details: [
       "Residential homes, duplexes, and apartment blocks",
       "Commercial and mixed-use buildings",
@@ -14,11 +14,11 @@ const services: ServiceItem[] = [
     ],
   },
   {
-    slug: "civil-structural-engineering",
+    slug: "civil-structural-infrastructure",
     icon: "civil",
-    title: "Civil & Structural Engineering",
+    title: "Civil & Structural Infrastructure",
     description:
-      "Civil and structural construction works delivered with proper planning and professional execution.",
+      "Foundations, reinforced concrete frameworks, drainage networks, and heavy earthworks built to state standards.",
     details: [
       "Structural design coordination and execution",
       "Drainage, external works, and site preparation",
@@ -30,7 +30,7 @@ const services: ServiceItem[] = [
     icon: "renovation",
     title: "Building Renovation & Rehabilitation",
     description:
-      "Renovation, remodeling, rehabilitation, and improvement of existing structures.",
+      "Structural remediation, crack repair, spatial redesigns, and comprehensive property upgrades.",
     details: [
       "Remodeling of existing residential and commercial spaces",
       "Structural repairs and strengthening",
@@ -38,11 +38,11 @@ const services: ServiceItem[] = [
     ],
   },
   {
-    slug: "floor-wall-tiling",
+    slug: "surface-finishes-precision-tiling",
     icon: "tiling",
-    title: "Floor & Wall Tiling",
+    title: "Surface Finishes & Precision Tiling",
     description:
-      "Professional installation of floor and wall tiles for residential and commercial spaces.",
+      "Laser-level installation of porcelain, ceramic, marble, and granite finishes for high-traffic and luxury spaces.",
     details: [
       "Ceramic, porcelain, and granite tiling",
       "Bathroom, kitchen, and external wall finishes",
@@ -50,11 +50,11 @@ const services: ServiceItem[] = [
     ],
   },
   {
-    slug: "concrete-works",
+    slug: "reinforced-concrete-works",
     icon: "concrete",
-    title: "Concrete Works",
+    title: "Reinforced Concrete Works",
     description:
-      "Foundation works, reinforced concrete works, slabs, beams, columns, bases, and other concrete construction.",
+      "Precision formwork, steel reinforcement placement, and high-strength casting for columns, beams, and suspended slabs.",
     details: [
       "Foundations, bases, and ground beams",
       "Reinforced slabs, beams, and columns",
@@ -62,11 +62,11 @@ const services: ServiceItem[] = [
     ],
   },
   {
-    slug: "project-management",
+    slug: "project-management-supervision",
     icon: "management",
-    title: "Project Management",
+    title: "Project Management & Supervision",
     description:
-      "Planning, coordination, supervision, cost control, scheduling, and monitoring of construction projects.",
+      "Site supervision, material procurement tracking, BOQ cost auditing, and critical-path scheduling.",
     details: [
       "Cost control, scheduling, and progress monitoring",
       "Contractor and supplier coordination",
@@ -74,11 +74,11 @@ const services: ServiceItem[] = [
     ],
   },
   {
-    slug: "building-maintenance",
+    slug: "facility-maintenance",
     icon: "maintenance",
-    title: "Building Maintenance",
+    title: "Facility Maintenance",
     description:
-      "Maintenance, repairs, and improvement works to help clients preserve the condition and value of their properties.",
+      "Routine structural inspections, waterproofing, and preventative repairs to preserve long-term asset value.",
     details: [
       "Preventive and corrective maintenance",
       "Repairs to finishes, roofs, and services",

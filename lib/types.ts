@@ -67,6 +67,23 @@ export type ProjectCategory =
 
 export type ProjectStatus = "Completed" | "In Progress";
 
+export interface ProjectStage {
+  title: string;
+  description: string;
+};
+
+export interface ProjectVideo {
+  url: string;
+  caption?: string;
+};
+
+export interface ProjectTestimonial {
+  quote: string;
+  authorName?: string;
+  authorRole?: string;
+  photo?: string;
+};
+
 export interface ProjectItem {
   slug: string;
   title: string;
@@ -80,6 +97,11 @@ export interface ProjectItem {
     after: string;
     cover: string;
   };
+  scopeOfWork?: string[];
+  stages?: ProjectStage[];
+  gallery?: string[];
+  videos?: ProjectVideo[];
+  testimonials?: ProjectTestimonial[];
 }
 
 export interface TestimonialItem {

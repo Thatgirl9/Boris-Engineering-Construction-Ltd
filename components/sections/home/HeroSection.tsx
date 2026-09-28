@@ -22,22 +22,18 @@ export function HeroSection({ company }: { company: CompanyInfo }) {
 
       <Container className="relative py-20 sm:py-28 lg:py-32">
         <div className="max-w-2xl">
-          <Eyebrow divider={true}>Engineering Excellence. Built To Last</Eyebrow>
+
+          <Eyebrow divider={true}>BUILDING & CIVIL ENGINEERING CONTRACTORS</Eyebrow>
           <h1 className="mt-4 font-archivo text-4xl font-bold leading-[1.1] tracking-tight sm:text-5xl lg:text-[3.75rem]">
             {company.name.toUpperCase()}
           </h1>
           <p className="mt-4 text-xl font-archivo font-semibold text-secondary">{company.tagline}</p>
           <p className="mt-6 text-base font-ibm leading-relaxed text-on-primary/80">
+         
             Welcome to {company.name}, a Nigerian engineering and construction company committed
-            to delivering quality, durable, and innovative construction solutions. We specialize
-            in residential, commercial, and civil engineering projects, as well as renovation,
-            building finishing, project management, and related construction services.
+            to delivering quality, durable, and innovative construction solutions.  We deliver turnkey residential developments, commercial facilities, and civil infrastructure across Nigeria. Operating under strict regulatory compliance (RC: 9527991), our focus is structural discipline, vetted materials, and clear milestone billing from groundbreaking to handover.
           </p>
-          <p className="mt-4 text-base font-ibm leading-relaxed text-on-primary/80">
-            Our approach is centered on quality workmanship, safety, professionalism, integrity,
-            and customer satisfaction. We work closely with our clients to transform their ideas
-            into functional, durable, and well-executed projects.
-          </p>
+          
 
           <div className="mt-8 flex flex-wrap gap-3">
             <Button href="/contact" variant="primary" className="h-10 w-42.75">

@@ -89,10 +89,11 @@ export function getAboutOverview() {
     eyebrow: "Company Overview",
     heading: "Who we are",
     paragraphs: [
-      "Boris Engineering & Construction Ltd is a legally registered Nigerian construction and engineering company (RC: 9527991), dedicated to providing reliable, professional, and compliant construction solutions. We believe that successful construction goes beyond putting up structures. It requires proper planning, quality materials, skilled workmanship, effective project management, uncompromising commitment to site safety, and clear communication with clients.",
-      "Our goal is to deliver projects that meet high standards of quality, durability, structural integrity, and professionalism. We build lasting relationships with our clients through transparency, accountability, effective communication, and engineering excellence.",
-      "Our services and capabilities continue to grow across civil engineering, building construction, property development, and real estate. As the company grows, we aim to expand our capabilities across construction, engineering, property development, and real estate while embracing modern technology to improve the way construction projects are planned and delivered.",
-      "At Boris Engineering & Construction Ltd, we are committed to building not just structures, but lasting value, trusted relationships, and infrastructure that stands the test of time.",
+      "Boris Engineering & Construction Ltd is a registered Nigerian engineering and construction firm (RC: 9527991 | RN: SC 281603219). We deliver turnkey building construction, civil engineering infrastructure, and capital property developments across Nigeria.",
+      "​We operate on structural discipline, verified material standards, and transparent milestone reporting. From subsoil assessment and foundation engineering to structural framing and final finishes, we manage projects with strict adherence to approved building codes, realistic timelines, and zero unverified costs.",
+      // "Our goal is to deliver projects that meet high standards of quality, durability, structural integrity, and professionalism. We build lasting relationships with our clients through transparency, accountability, effective communication, and engineering excellence.",
+      // "Our services and capabilities continue to grow across civil engineering, building construction, property development, and real estate. As the company grows, we aim to expand our capabilities across construction, engineering, property development, and real estate while embracing modern technology to improve the way construction projects are planned and delivered.",
+      // "At Boris Engineering & Construction Ltd, we are committed to building not just structures, but lasting value, trusted relationships, and infrastructure that stands the test of time.",
     ],
   };
 }
@@ -100,8 +101,8 @@ export function getAboutOverview() {
 export function getHomeAboutPreview() {
   return {
     eyebrow: "About Us",
-    heading: "Construction built on planning, quality, and clear communication",
+    heading: "Construction Built on Engineering Discipline and Transparency",
     paragraph:
-      "We believe successful construction goes beyond putting up structures. It requires proper planning, quality materials, skilled workmanship, effective project management, safety, and clear communication with clients on every project we take on.",
+      "Durable structures rely on accurate engineering calculations, tested materials, and rigorous site supervision not guesswork. We execute projects strictly to approved architectural and structural drawings, giving clients complete financial and technical visibility at every stage.",
   };
 }

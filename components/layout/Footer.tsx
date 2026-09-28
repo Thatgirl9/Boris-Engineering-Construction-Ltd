@@ -19,8 +19,9 @@ export function Footer({ links, company }: { links: NavLink[]; company: CompanyI
 
           <p className="mt-2 text-sm font-regular text-secondary font-ibm">{company.tagline}</p>
           <p className="mt-4 max-w-sm text-sm leading-relaxed font-ibm font-regular text-on-primary/70">
-            A Nigerian engineering and construction company delivering quality, durable, and
-            innovative construction solutions across residential, commercial, and civil projects.
+            A registered Nigerian building and civil engineering firm delivering durable residential, commercial, and infrastructure developments with absolute structural and financial accountability.
+            Incorporated in Nigeria | RC: 9527991 | RN: SC 281603219.
+
           </p>
           <div className="mt-6 flex gap-3">
             {company.socials.map((s) => (
