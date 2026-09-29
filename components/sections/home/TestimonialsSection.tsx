@@ -8,14 +8,14 @@ import { CompanyInfo } from "@/lib/types";
 export function TestimonialsSection({ testimonials, company }: { testimonials: TestimonialItem[], company:CompanyInfo }) {
   return (
     <Section background="muted">
-      <CTABanner
+      {/* <CTABanner
         company={company}
         heading="Ready to discuss your project with our team?"
         description="We are here to help you every step of the way. Contact us today for a detailed consultation."
-        // ctaText="Request a Quote"
-        // ctaLink="/contact"
-      />
-      {/* <SectionHeading
+        ctaText="Request a Quote"
+        ctaLink="/contact"
+      /> */}
+      <SectionHeading
         eyebrow="Client Testimonials"
         heading="Feedback from our clients"
         description="This space is reserved for genuine client testimonials, published as projects are completed and handed over."
@@ -24,7 +24,7 @@ export function TestimonialsSection({ testimonials, company }: { testimonials: T
         {testimonials.map((t, i) => (
           <TestimonialCard key={i} item={t} />
         ))}
-      </div> */}
+      </div>
     </Section>
   );
 }

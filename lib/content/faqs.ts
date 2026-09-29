@@ -3,29 +3,25 @@ import { FaqItem } from "@/lib/types";
 export function getFaqs(): FaqItem[] {
   return [
     {
-      question: "What types of projects does Boris undertake?",
+      question: "What is your payment structure?​",
       answer:
-        "We handle residential, commercial, and civil engineering projects, including new builds, renovations, concrete works, tiling, and full project management, from planning through handover.",
+        "We use a milestone based payment structure tied to clear project stages (foundation, structural works, finishing) rather than a full upfront lump sum."​
     },
     {
-      question: "How can I request a quotation?",
+      question: "How long does a typical project take?",
       answer:
-        "Fill out the Request a Quote form with your project details, or reach us directly by phone or WhatsApp. We will respond with a clear, itemized quotation based on your requirements.",
+        "Timelines depend on project size and scope. We provide a realistic, documented schedule during your initial consultation.​",
     },
     {
-      question: "Do you handle renovation projects?",
+      question: "How do you ensure material quality on site?​",
       answer:
-        "Yes. We carry out renovation, remodeling, and rehabilitation of existing residential and commercial buildings, including structural repairs and finishing upgrades.",
+        "We source materials strictly from vetted suppliers and enforce structural checks including rebar specifications and concrete mix ratios to ensure maximum safety and durability.​",
     },
     {
-      question: "Do you provide site inspections?",
+      question: "Do you help with building permits and approvals?​",
       answer:
-        "Yes, site inspection is the second step in our delivery process. We visit the site to evaluate conditions and requirements before preparing an assessment and quotation.",
+        "Yes, we guide clients through local planning authority permits and ensure full regulatory compliance for your project.",
     },
-    {
-      question: "Do you work outside your main operating area?",
-      answer:
-        "We are based in Lagos but take on projects across Nigeria depending on scope. Let us know your project location when requesting a quote and we will confirm feasibility.",
-    },
+   
   ];
 }
