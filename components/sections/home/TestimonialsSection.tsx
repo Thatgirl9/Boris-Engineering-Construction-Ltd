@@ -2,19 +2,10 @@ import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { TestimonialCard } from "@/components/cards/TestimonialCard";
 import { TestimonialItem } from "@/lib/types";
-import { CTABanner } from "@/components/sections/shared/CTABanner";
-import { CompanyInfo } from "@/lib/types";
 
-export function TestimonialsSection({ testimonials, company }: { testimonials: TestimonialItem[], company:CompanyInfo }) {
+export function TestimonialsSection({ testimonials }: { testimonials: TestimonialItem[] }) {
   return (
     <Section background="muted">
-      {/* <CTABanner
-        company={company}
-        heading="Ready to discuss your project with our team?"
-        description="We are here to help you every step of the way. Contact us today for a detailed consultation."
-        ctaText="Request a Quote"
-        ctaLink="/contact"
-      /> */}
       <SectionHeading
         eyebrow="Client Testimonials"
         heading="Feedback from our clients"
